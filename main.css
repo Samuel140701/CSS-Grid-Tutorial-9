@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html {
+    /*background-color: rgb(167, 166, 164);*/
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(196, 195, 193);
+    /*width: 100vw;*/
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: rgb(71, 71, 241);
+}
+
+.logo {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+}
+
+nav .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    list-style-type: none;
+    padding: 0 2em 0 2em;
+
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.nav-links li a:hover {
+    cursor: pointer;
+    color:  black;
+    transform: scale(1.05);
+}
+
+.nav-links li a:active {
+    cursor: pointer;
+    color:  green;
+    transform: scale(0.9);
+}
+
+#hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color: skyblue;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 1rem;
+}
+
+.cta-btn {
+    text-decoration: none;
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: .5em;
+    font-weight: 600;
+    width: fit-content;
+    justify-self: center;
+    margin: 10px 0 0 0;
+}
+
+#grid-container {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 5px;
+    margin: 5px;
+}
+
+#main {
+    background: white;
+    grid-column: 1/2;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+#main h2 {
+    padding: 10px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(autofill, minmax(300px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "Web-Dsgn Front-end_Dev"
+    "performance performance";
+    gap: 5px;
+    padding: 2em;
+}
+
+.Web-Dsgn {
+    grid-area: Web-Dsgn;
+    background: grey;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.Front-end_Dev {
+    grid-area: Front-end_Dev;
+    background: grey;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.performance {
+    grid-area: performance;
+    background: grey;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    border-radius: 10px;
+}
+
+
+
+#aside {
+    background: white;
+    grid-column: 2/2;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.links ul li {
+    list-style-type: none;
+    padding: 1rem 0 1rem 0;
+}
+
+.links ul li a {
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: .6rem;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: rgb(71, 71, 241);
+}
