@@ -123,22 +123,13 @@ nav .nav-links {
 
 .main {
     display: grid;
-    grid-template-columns: repeat(autofill, minmax(300px, 1fr));
+    grid-template-columns: repeat(autofit, minmax(300px, 1fr));
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "Web-Dsgn Front-end_Dev"
     "performance performance";
     gap: 8px;
     padding: 2em;
-}
-
-@media (max-width:980px) {
-    .main {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-auto-flow: column;
-    }
-    
 }
 
 .Web-Dsgn {
@@ -171,7 +162,40 @@ nav .nav-links {
     border-radius: 10px;
 }
 
+@media (max-width:980px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-flow: column;
+    }
 
+    .Web-Dsgn {
+    background: grey;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.Front-end_Dev {
+    background: grey;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.performance {
+    background: grey;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    border-radius: 10px;
+}
+}
 
 #aside {
     background: white;
@@ -195,6 +219,22 @@ nav .nav-links {
 
 .links ul li a {
     text-decoration: none;
+}
+
+@media (max-width:980px) {
+    #aside {
+        background: white;
+        height: fit-content;
+        border-radius: 10px;
+    }
+
+    .aside {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        justify-content: center;
+        align-items: flex-start;
+    }
 }
 
 footer {
