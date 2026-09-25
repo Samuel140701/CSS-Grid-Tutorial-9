@@ -1,6 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
+    /*margin: 0;
+    padding: 0;*/
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -19,10 +19,11 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: .6rem;
+    padding: .05rem;
     margin: 5px;
     border-radius: 10px;
     background-color: rgb(71, 71, 241);
+    width: 100%;
 }
 
 .logo {
@@ -36,6 +37,12 @@ header {
     display: none;
 }
 
+@media (max-width:980px) {
+    .hamburger {
+        display: block;
+    }
+}
+
 nav .nav-links {
     display: flex;
     flex-direction: row;
@@ -45,7 +52,6 @@ nav .nav-links {
 .nav-links li {
     list-style-type: none;
     padding: 0 2em 0 2em;
-
 }
 
 .nav-links li a {
@@ -66,6 +72,12 @@ nav .nav-links {
     cursor: pointer;
     color:  green;
     transform: scale(0.9);
+}
+
+@media (max-width:980px) {
+    nav .nav-links {
+        display: none;
+    }
 }
 
 #hero {
@@ -93,15 +105,23 @@ nav .nav-links {
     margin: 10px 0 0 0;
 }
 
+.cta-btn:hover {
+    transform: scale(1.1);
+}
+
+.cta-btn:active {
+    transform: scale(0.9);
+}
+
 #grid-container {
     height: 100%;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+   grid-template-columns: 3fr 1fr /*(auto-fit, minmax(300px, 1fr))*/;
     gap: 5px;
     margin: 5px;
 }
 
-@media (max-width:980px) {
+/*@media (max-width:980px) {
     #grid-container {
         display: grid;
         grid-template-columns: (auto-fit, minmax(300px, 1fr));
@@ -109,7 +129,7 @@ nav .nav-links {
         gap: 5px;
         margin: 5px;
     }
-}
+}*/
 
 #main {
     background: white;
@@ -125,11 +145,14 @@ nav .nav-links {
 
 .main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 8px;
     padding: 2em;
 }
-
+.main > *:last-child{
+    grid-column:1/-1;
+    border:1px solid green;
+}
 .Web-Dsgn {
     background: grey;
     justify-content: center;
@@ -236,7 +259,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: .6rem;
+    padding: .05rem;
     margin: 5px;
     border-radius: 10px;
     background-color: rgb(71, 71, 241);
